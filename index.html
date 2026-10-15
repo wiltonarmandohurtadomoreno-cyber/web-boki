@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Boki | Descubre lo local</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
+
+            <a href="#" class="logo">
+                boki<span>.</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#categorias">Categorías</a>
+                <a href="#negocios">Negocios</a>
+            </nav>
+
+            <button class="business-button">
+                Soy un negocio
+            </button>
+
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+    <main>
+
+        <section class="hero" id="inicio">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">DESCUBRE LO LOCAL</p>
+
+                <h1>
+                    Todo lo que buscas,
+                    <span>en un solo lugar.</span>
+                </h1>
+
+                <p class="hero-text">
+                    Encuentra negocios, productos y servicios cerca de ti.
+                    Descubre lo mejor de tu ciudad en Boki.
+                </p>
+
+                <!-- SEARCH -->
+                <div class="search-box">
+
+                    <span class="search-icon">⌕</span>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="¿Qué estás buscando?"
+                    >
+
+                    <button onclick="buscarNegocios()">
+                        Buscar
+                    </button>
+
+                </div>
+
+                <p class="search-hint">
+                    Prueba buscando: comida, belleza, moda...
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CATEGORÍAS -->
+        <section class="categories-section" id="categorias">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <p class="eyebrow">EXPLORA</p>
+                        <h2>Categorías</h2>
+                    </div>
+
+                    <p>
+                        Encuentra exactamente lo que necesitas.
+                    </p>
+
+                </div>
+
+
+                <div class="categories">
+
+                    <button class="category active" onclick="filtrar('todos', this)">
+                        <span>✦</span>
+                        Todos
+                    </button>
+
+                    <button class="category" onclick="filtrar('comida', this)">
+                        <span>☕</span>
+                        Comida
+                    </button>
+
+                    <button class="category" onclick="filtrar('belleza', this)">
+                        <span>✿</span>
+                        Belleza
+                    </button>
+
+                    <button class="category" onclick="filtrar('moda', this)">
+                        <span>♡</span>
+                        Moda
+                    </button>
+
+                    <button class="category" onclick="filtrar('eventos', this)">
+                        <span>✦</span>
+                        Eventos
+                    </button>
+
+                    <button class="category" onclick="filtrar('hogar', this)">
+                        <span>⌂</span>
+                        Hogar
+                    </button>
+
+                    <button class="category" onclick="filtrar('tecnologia', this)">
+                        <span>⌁</span>
+                        Tecnología
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- NEGOCIOS -->
+        <section class="businesses-section" id="negocios">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <p class="eyebrow">PARA TI</p>
+                        <h2>Negocios destacados</h2>
+                    </div>
+
+                    <a href="#" class="view-all">
+                        Ver todos →
+                    </a>
+
+                </div>
+
+
+                <div class="business-grid">
+
+
+                    <!-- NEGOCIO 1 -->
+                   <article 
+    class="business-card"
+    data-category="comida"
+    data-name="Mocca & Miel"
+    data-rating="★ 4.9"
+    data-description="Postres artesanales hechos con mucho amor."
+    data-location="Tunja, Boyacá"
+    data-hours="Lunes a sábado · 10:00 AM - 7:00 PM"
+    data-services="Cheesecakes, postres artesanales y pedidos personalizados."
+    data-instagram="https://instagram.com/"
+>
+
+                        <div class="business-image image-one">
+                            <span class="business-category">
+                                Repostería
+                            </span>
+
+                            <button class="favorite">♡</button>
+                        </div>
+
+                        <div class="business-info">
+
+                            <div class="business-top">
+
+                                <h3>Mocca & Miel</h3>
+
+                                <span class="rating">
+                                    ★ 4.9
+                                </span>
+
+                            </div>
+
+                            <p class="description">
+                                Postres artesanales hechos con mucho amor.
+                            </p>
+
+                            <p class="location">
+                                ♧ Tunja, Boyacá
+                            </p>
+
+                            <button class="view-business">
+                                Ver negocio →
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- NEGOCIO 2 -->
+                    <article 
+    class="business-card"
+    data-category="belleza"
+    data-name="Studio Bloom"
+    data-rating="★ 4.8"
+    data-description="Cuidado personal, uñas y servicios de belleza."
+    data-location="Tunja, Boyacá"
+    data-hours="Lunes a sábado · 9:00 AM - 7:00 PM"
+    data-services="Manicure, pedicure, uñas y servicios de belleza."
+    data-instagram="https://instagram.com/"
+>
+
+                        <div class="business-image image-two">
+                            <span class="business-category">
+                                Belleza
+                            </span>
+
+                            <button class="favorite">♡</button>
+                        </div>
+
+                        <div class="business-info">
+
+                            <div class="business-top">
+
+                                <h3>Studio Bloom</h3>
+
+                                <span class="rating">
+                                    ★ 4.8
+                                </span>
+
+                            </div>
+
+                            <p class="description">
+                                Cuidado personal, uñas y servicios de belleza.
+                            </p>
+
+                            <p class="location">
+                                ♧ Tunja, Boyacá
+                            </p>
+
+                            <button class="view-business">
+                                Ver negocio →
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                  <!-- NEGOCIO 3 -->
+<article 
+    class="business-card"
+    data-category="comida"
+    data-name="Litte Don-nut"
+    data-rating="★ 4.2"
+    data-description="Litte Don-nut es un emprendimiento dedicado a la elaboración y comercialización de mini donas frescas, deliciosas y de excelente calidad."
+    data-location="Tunja, Boyacá"
+    data-hours="Bajo pedidos"
+    data-services="Mini donas frescas, diferentes presentaciones y opciones de decoración."
+    data-instagram="https://instagram.com/litte_don_nut"
+>
+
+    <div class="business-image image-three">
+        <span class="business-category">
+            Repostería
+        </span>
+
+        <button class="favorite">♡</button>
+    </div>
+
+    <div class="business-info">
+
+        <div class="business-top">
+
+            <h3>Litte Don-nut</h3>
+
+            <span class="rating">
+                ★ 4.2
+            </span>
+
+        </div>
+
+        <p class="description">
+            Mini donas frescas, deliciosas y personalizadas.
+        </p>
+
+        <p class="location">
+            ♧ Tunja, Boyacá
+        </p>
+
+        <button class="view-business">
+            Ver negocio →
+        </button>
+
+    </div>
+
+</article>
+                   
+                </div>
+
+            </div>
+
+        </section>
+    
+<!-- 
+=========================
+     FICHA DEL NEGOCIO
+========================= -->
+
+<section id="business-page" class="business-page">
+
+    <div class="business-page-container">
+
+        <!-- ENCABEZADO -->
+        <button id="back-to-businesses" class="back-button">
+            ← Volver a negocios
+        </button>
+
+        <div class="business-page-header">
+
+            <div id="page-business-image" class="business-page-image"></div>
+
+            <div class="business-page-info">
+
+                <span id="page-business-category" class="business-category">
+                    Categoría
+                </span>
+
+                <h2 id="page-business-name">
+                    Nombre del negocio
+                </h2>
+
+                <span id="page-business-rating" class="rating">
+                    ★ 5.0
+                </span>
+
+                <p id="page-business-description">
+                    Descripción del negocio.
+                </p>
+
+                <p id="page-business-location">
+                    ♧ Tunja, Boyacá
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- INFORMACIÓN -->
+
+        <div class="business-page-details">
+
+            <div class="business-detail-card">
+
+                <span class="detail-icon">🕐</span>
+
+                <div>
+
+                    <strong>Horario</strong>
+
+                    <p id="page-business-hours">
+                        Lunes a sábado · 9:00 AM - 7:00 PM
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="business-detail-card">
+
+                <span class="detail-icon">✨</span>
+
+                <div>
+
+                    <strong>Servicios</strong>
+
+                    <p id="page-business-services">
+                        Consulta los servicios disponibles.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- PRODUCTOS DESTACADOS -->
+
+<div class="business-page-products">
+
+    <p class="eyebrow">DESCUBRE</p>
+
+    <h3>Productos destacados</h3>
+
+    <div id="business-gallery" class="business-gallery">
+        <!-- Las imágenes aparecerán aquí automáticamente -->
+    </div>
+
+</div>
+
+
+        <!-- ACCIONES -->
+
+        <div class="business-page-actions">
+
+            <button id="page-instagram-button">
+                Instagram
+            </button>
+
+            <button id="page-contact-button">
+                Contactar
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+        <!-- CTA -->
+        <section class="cta-section">
+
+            <div class="cta-content">
+
+                <p class="eyebrow">¿TIENES UN NEGOCIO?</p>
+
+                <h2>
+                    Haz que más personas
+                    <span>te encuentren.</span>
+                </h2>
+
+                <p>
+                    Próximamente podrás registrar tu negocio
+                    y formar parte de Boki.
+                </p>
+
+                <button class="cta-button" id="open-register">
+                    Quiero registrar mi negocio →
+                </button>
+
+            </div>
+
+        </section>
+        <!-- =========================
+     REGISTRO DE NEGOCIO
+========================= -->
+
+<div id="register-modal" class="register-modal">
+
+    <div class="register-content">
+
+        <button class="close-register" id="close-register">
+            ×
+        </button>
+
+        <div class="register-header">
+
+            <p class="eyebrow">ÚNETE A BOKI</p>
+
+            <h2>
+                Registra tu <span>negocio.</span>
+            </h2>
+
+            <p>
+                Cuéntanos sobre tu negocio y haz que más personas
+                puedan encontrarte en Boki.
+            </p>
+
+        </div>
+
+
+        <form id="business-form">
+
+            <div class="form-section">
+
+                <h3>Información básica</h3>
+
+                <div class="form-group">
+
+                    <label for="business-name">
+                        Nombre del negocio
+                    </label>
+
+                    <input
+                        type="text"
+                        id="business-name"
+                        placeholder="Ej. Mocca & Miel"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="business-category">
+                        Categoría
+                    </label>
+
+                    <select id="business-category" required>
+
+                        <option value="">
+                            Selecciona una categoría
+                        </option>
+
+                        <option value="comida">
+                            Comida
+                        </option>
+
+                        <option value="belleza">
+                            Belleza
+                        </option>
+
+                        <option value="moda">
+                            Moda
+                        </option>
+
+                        <option value="eventos">
+                            Eventos
+                        </option>
+
+                        <option value="hogar">
+                            Hogar
+                        </option>
+
+                        <option value="tecnologia">
+                            Tecnología
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="business-description">
+                        Descripción
+                    </label>
+
+                    <textarea
+                        id="business-description"
+                        placeholder="Cuéntanos brevemente sobre tu negocio..."
+                        rows="4"
+                        required
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-section">
+
+                <h3>Información del negocio</h3>
+
+                <div class="form-group">
+
+                    <label for="business-location">
+                        Ubicación
+                    </label>
+
+                    <input
+                        type="text"
+                        id="business-location"
+                        placeholder="Ej. Tunja, Boyacá"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="business-hours">
+                        Horario
+                    </label>
+
+                    <input
+                        type="text"
+                        id="business-hours"
+                        placeholder="Ej. Lunes a sábado · 9:00 AM - 7:00 PM"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="business-services">
+                        Servicios
+                    </label>
+
+                    <textarea
+                        id="business-services"
+                        placeholder="Ej. Manicure, pedicure, uñas..."
+                        rows="3"
+                        required
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-section">
+
+                <h3>Contacto y redes</h3>
+
+                <div class="form-group">
+
+                    <label for="business-instagram">
+                        Instagram
+                    </label>
+
+                    <input
+                        type="text"
+                        id="business-instagram"
+                        placeholder="@tunegocio"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="business-whatsapp">
+                        WhatsApp
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="business-whatsapp"
+                        placeholder="Ej. 300 123 4567"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <button type="submit" class="register-submit">
+                Registrar mi negocio →
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-container">
+
+            <div>
+                <a href="#" class="footer-logo">
+                    boki<span>.</span>
+                </a>
+
+                <p>
+                    Descubre lo mejor de tu ciudad.
+                </p>
+            </div>
+
+            <div class="footer-right">
+                © 2026 Boki
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
